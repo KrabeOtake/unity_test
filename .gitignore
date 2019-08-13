@@ -1,4 +1,6 @@
-Libriray/
+Library/
 Logs/
 Packages/
 test/
+unity_test/
+obj/
