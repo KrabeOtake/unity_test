@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class IronSourceInstance
@@ -10,10 +12,27 @@ public class IronSourceInstance
     private static string APP_KEY = "9c530d5d";
     private static string REWARDED_INSTANCE_ID = "0";
 
-	public static IronSource Instance()
+    //todo use C# auto-property 
+    //public IronSource Instance
+    //{
+    //    get
+    //    {
+    //        return _instance;
+    //    }
+    //    set
+    //    {
+    //        _instance = value;
+    //    }
+    //}
+
+    //private IronSource _instance;
+
+    public static IronSource Instance()
 	{
 		if (_Instance == null)
 		{
+            //todo add to don't destroy
+
             _Instance = new IronSourceInstance();
             GameObject myRoadInstance = GameObject.Instantiate(Resources.Load("IronSourceEventsPrefab")) as GameObject;
             //Dynamic config example

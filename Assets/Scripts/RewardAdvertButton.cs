@@ -55,6 +55,8 @@ namespace Assets.Scripts
 
         public bool reward;
 
+
+        //todo make ot throw Coroutine
         private void Update()
         {
             if (!reward) return;
